@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas</title>
+</head>
+<body>
+    <!-- <details> y <summary>: Estas etiquetas permiten crear un componente de acordeón. <details> define un bloque de contenido que el usuario puede expandir o contraer, mientras que <summary> define un encabezado clicable para ese contenido. Son útiles para mostrar información adicional que no siempre se necesita mostrar de inmediato. -->
+    <details>
+        <summary>Haz clic para más información</summary>
+        <p>Este es un detalle oculto que se muestra al hacer clic.</p>
+      </details>
+      <!--<mark> Esta etiqueta se usa para resaltar texto dentro de un documento, generalmente para indicar que una palabra o frase es relevante o importante. El texto dentro de <mark> se muestra con un fondo amarillo por defecto. -->
+      <p>Este es un texto con una <mark>palabra destacada</mark>.</p>
+<!-- <progress>:Esta etiqueta se usa para mostrar una barra de progreso visual. Se utiliza comúnmente para indicar el avance de tareas como descargas o cargas. -->
+      <progress value="70" max="100"></progress>
+<!--<output>: Esta etiqueta define el resultado de una acción del usuario o de un script. Es útil cuando se quiere mostrar el resultado de cálculos o interacciones de formularios. -->
+      <form>
+        <input type="number" id="valor1" value="5">
+        <input type="number" id="valor2" value="3">
+        <output id="resultado"></output>
+      </form>
+      <script>
+        document.getElementById('valor1').addEventListener('input', calcular);
+        document.getElementById('valor2').addEventListener('input', calcular);
+      
+        function calcular() {
+          let valor1 = parseInt(document.getElementById('valor1').value);
+          let valor2 = parseInt(document.getElementById('valor2').value);
+          document.getElementById('resultado').value = valor1 + valor2;
+        }
+      </script>
+<!-- <iframe> con el atributo sandbox: Aunque la etiqueta <iframe> es conocida para insertar contenido de otras fuentes dentro de tu página, el atributo sandbox ofrece una capa de seguridad extra al restringir ciertas funcionalidades dentro del <iframe>, como evitar la ejecución de scripts o el envío de formularios. Este es un uso menos común, pero muy útil cuando se integran contenidos de terceros. -->
+<iframe src="https://www.example.com" sandbox></iframe>
+
+
+</body>
+</html>
+
